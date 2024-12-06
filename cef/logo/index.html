@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent; /* Fundo transparente */
+            font-family: 'Orbitron', sans-serif;
+	    cef.emit("game:hud:setComponentVisible", "interface", false);
+	    cef.emit("game:hud:setComponentVisible", "radar", false);
+        }
+
+        .zenith-container {
+            position: absolute;
+            top: 10px; /* Ajusta a distância do topo */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #fff;
+            line-height: 1;
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 3s ease-in-out forwards; /* Animação de 3 segundos */
+        }
+
+        .zenith-container span {
+            display: block;
+            font-size: 1rem; /* Tamanho do texto */
+            font-weight: 700; /* Fonte mais grossa */
+            background: linear-gradient(45deg, #ff79c6, #ff6ec7); /* Gradiente rosa */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Deixa o fundo do texto transparente */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Invisível */
+            }
+            to {
+                opacity: 1; /* Totalmente visível */
+            }
+        }
+
+        /* Responsivo para telas menores */
+        @media (max-width: 768px) {
+            .zenith-container span {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="zenith-container">
+        <span>ZE</span>
+        <span>NI</span>
+        <span>TH</span>
+    </div>
+</body>
+</html>
